@@ -48,7 +48,7 @@ public class PersonDomainModel {
     public UUID getPersonID() {
 		return PersonID;
 	}
-	private void setPersonID(UUID PersonID) {
+	protected void setPersonID(UUID PersonID) {
 		this.PersonID = PersonID;
 	}
     
@@ -118,8 +118,8 @@ public class PersonDomainModel {
         return birthday.get().toString();
     }
 
-    public void setBirthday(LocalDate birthday) {
-        this.birthday.set(birthday);
+    public void setBirthday(LocalDate birthday2) {
+        this.birthday.set(birthday2);
     }
 
     public ObjectProperty<LocalDate> birthdayProperty() {
