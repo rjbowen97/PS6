@@ -3,6 +3,7 @@ package ch.makery.address.util;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Date;
 
 /**
  * Helper functions for handling dates.
@@ -58,5 +59,11 @@ public class DateUtil {
     public static boolean validDate(String dateString) {
         // Try to parse the String.
         return DateUtil.parse(dateString) != null;
+    }
+    
+    public static Date convertLocalDateToDate(LocalDate date)
+    {
+    	Date normalDate = java.sql.Date.valueOf(date);
+    	return normalDate;
     }
 }
